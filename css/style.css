@@ -88,8 +88,7 @@ body {
 
 
 
-
-/* --- ESTILO PARA PREGUNTAS CON HTML --- */
+/* ESTILO DE PREGUNTAS*/
 
 .question-text p {
     font-size: 18px;
@@ -110,10 +109,6 @@ body {
     font-size: 17px;
     margin-bottom: 6px;
 }
-
-
-
-
 
 
 .options-container {
