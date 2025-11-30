@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulacro de Parcial - Vías de Comunicación I</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar izquierda -->
+    <div class="sidebar-left">
+        <div class="q-info-block">
+            <div class="q-number" id="q-number-display">Pregunta 1</div>
+            <div class="q-status" id="q-status-display">Sin responder aún</div>
+            <div class="q-score">Puntúa como 1,00</div>
+        </div>
+
+        <div class="q-info-block" style="margin-top: 20px;">
+            <strong>Tiempo restante:</strong>
+            <div id="timer" class="timer">--:--</div>
+        </div>
+
+        <div class="q-score" id="realtime-score">Aciertos: 0 / 0</div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="main-content">
+        <div id="question-container">
+            <div class="question-text" id="question-text">Cargando pregunta...</div>
+
+            <div class="options-container" id="options-list"></div>
+
+            <div class="feedback-msg" id="feedback-area"></div>
+
+            <div class="actions">
+                <button class="btn-nav" id="btn-prev" onclick="prevQuestion()">Anterior</button>
+                <button class="btn-check" id="btn-check" onclick="checkAnswer()">CORROBORAR</button>
+                <button class="btn-nav" id="btn-next" onclick="nextQuestion()">Siguiente</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar derecha -->
+    <div class="sidebar-right">
+        <div class="nav-title">Navegación por el cuestionario</div>
+        <div class="nav-grid" id="nav-grid"></div>
+
+        <div class="end-link">
+            <a href="#" onclick="location.reload()">Terminar intento...</a>
+        </div>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="./js/preguntas.js"></script>
+<script src="./js/script.js"></script>
+
+</body>
+</html>
