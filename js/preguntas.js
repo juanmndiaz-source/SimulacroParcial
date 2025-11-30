@@ -1,46 +1,62 @@
 const questionBank = [
 {
     id: 1,
-    question: "Sea f una función definida en R que cumple: f'(x−1)=f'(x)=0, f'(x²)<0 si |x|<1, f''(x²−x)>0, f'(0)=f'(1)=0. Seleccionar la(s) alternativa(s) correcta(s).",
+    question: `
+        <p><strong>Sea f una función definida en \\( \\mathbb{R} \\) que cumple simultáneamente:</strong></p>
+        <ul>
+            <li>\\( f'(-1) = f'(1) = 0 \\)</li>
+            <li>\\( f'(x) < 0 \\) si \\( |x| < 1 \\)</li>
+            <li>\\( f'(x) > 0 \\) si \\( |x| > 1 \\)</li>
+            <li>\\( f(-1) = 4 \\) y \\( f(1) = 0 \\)</li>
+        </ul>
+        <p><strong>Seleccione una o más opciones:</strong></p>
+    `,
     options: [
-        "x = 1 es un mínimo local.",
-        "La función crece en (-∞,−1) ∪ (1,∞).",
-        "No puede asegurarse que x = 1 sea un máximo local.",
-        "p = lim(x→0−)(f(x) − f(0))/(x − 0) = lim(x→0+)(f(x) − f(0))/(x − 0) = f'(0)."
+        "a. \\(x = 1\\) es un mínimo local.",
+        "b. La función crece en \\(( -\\infty, -1 ) \\cup ( 1, \\infty )\\).",
+        "c. No puede asegurarse que \\(x = 1\\) sea un máximo local.",
+        "d. \\( \\lim_{x\\to -1^-} \\frac{f(x)-f(-1)}{x-(-1)} = \\lim_{x\\to -1^+} \\frac{f(x)-f(-1)}{x-(-1)} \\)."
     ],
-    correctIndex: [2, 3],
+    correctIndex: [1, 2],
     multiple: true,
-    feedback: "La información dada no permite asegurar si x=1 es máximo o mínimo. La igualdad del cociente incremental es la definición de derivada en 0."
+    feedback: "La función decrece entre -1 y 1 y crece fuera de ese intervalo. No se puede asegurar que x = 1 sea máximo local."
 },
 
 {
     id: 2,
-    question: "Considerar la parábola y² = 4px, con p>0. Seleccionar la(s) alternativa(s) correcta(s).",
+    question: `
+        <p><strong>Considere la parábola \\( y^2 = 4px \\), donde \\(p\\) es un número real distinto de cero.</strong></p>
+        <p><strong>Seleccione una o más opciones:</strong></p>
+    `,
     options: [
-        "La parábola tiene derivada en todo punto donde existe recta tangente.",
-        "La parábola no tiene recta tangente en el origen.",
-        "La recta tangente en (x₀, y₀) corta al eje x en (y₀²/(4p), 0).",
-        "La ecuación de la recta tangente en (x₀, y₀) es y = (p/y₀)(x − x₀) + y₀.",
-        "Los puntos donde la tangente es perpendicular a la recta dada están sobre y = −1."
+        "a. Esto es lo mismo tener derivada en un punto que recta tangente en él.",
+        "b. La parábola no tiene recta tangente en el origen de coordenadas.",
+        "c. La recta tangente a la parábola en el punto \\((x_0, y_0)\\) interesa a \\( y = -f(x_0) \\).",
+        "d. La recta tangente a la parábola en el punto \\((x_0, y_0)\\) se puede escribir como \\(y - y_0 = \\frac{2p}{y_0}(x - x_0)\\).",
+        "e. Los puntos sobre la parábola donde la recta tangente es perpendicular a la recta \\( y = \\frac{1}{2p}x \\) se encuentran sobre la recta horizontal \\( y = -1 \\)."
     ],
     correctIndex: [0, 3],
     multiple: true,
-    feedback: "La parábola tiene tangente vertical en el origen. La fórmula de la tangente es correctamente y = (p/y₀)(x − x₀) + y₀."
+    feedback: "La parábola tiene derivada siempre que y ≠ 0. En el origen sí existe recta tangente. La fórmula correcta para la tangente es la opción d."
 },
 
 {
     id: 3,
-    question: "Se desea el cilindro inscripto de máximo volumen en un cono recto de altura 5 cm y radio R=2.",
+    question: `
+        <p><strong>Se buscan determinar las dimensiones de un cilindro circular recto, de radio r y altura h, de volumen máximo posible inscripto en un cono circular recto de altura 5 cm y radio de base R &gt; 0.</strong></p>
+        <p><strong>Seleccione una o más opciones:</strong></p>
+    `,
     options: [
-        "El volumen máximo obtenido es mayor que (21π/27)R³.",
-        "Los valores extremos dependen de R y no se puede verificar que sea máximo.",
-        "El valor extremo obtenido es un máximo verificable con la segunda derivada.",
-        "El cilindro de mayor volumen cumple r = (2/3)R y h = (1/3)H.",
-        "Las dimensiones que maximizan el volumen son r = 2R/3 y h = 5/3.",
-        "El volumen máximo es menor que (32π/27)R³."
+        "a. Si \\(V(r,h)\\) es el volumen total, entonces su máximo se da cuando \\(3r = 2R\\).",
+        "b. El volumen máximo obtenido es mayor que \\( \\frac{27\\pi R^3}{256} \\).",
+        "c. Los valores extremos que se obtienen de la función volumen del cilindro dependen de \\(R\\) y por lo tanto no se puede verificar que sea un volumen máximo.",
+        "d. El cilindro de mayor volumen se obtiene cuando su altura es \\( h = \\frac{5}{3} r \\).",
+        "e. Las dimensiones del cilindro que maximizan el volumen son \\( r = \\frac{2}{3}R \\) y \\( h = \\frac{5}{3} \\cdot \\frac{2}{3}R \\).",
+        "f. El volumen máximo obtenido es menor que \\( \\frac{27\\pi R^3}{64} \\)."
     ],
-    correctIndex: [2, 3, 5],
+    correctIndex: [0, 3, 4],
     multiple: true,
-    feedback: "La optimización da r=2R/3 y h=H/3. El volumen máximo está entre los valores indicados en c y f."
-},
+    feedback: "La condición de máximo se obtiene con 3r = 2R. La proporción entre altura y radio es h = (5/3)r, lo que da las dimensiones de la opción e."
+}
+
 ];

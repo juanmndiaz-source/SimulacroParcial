@@ -7,7 +7,7 @@
 
 :root {
     --primary-color: #0f6db5;
-    --bg-color: #f2f2f2;
+    --bg-color: #e0e1e2;
     --text-color: #333;
     --border-color: #dee2e6;
     --correct-color: #d4edda;
@@ -73,7 +73,7 @@ body {
 .main-content {
     flex: 1;
     background: #e7f3f5;
-    border: 1px solid #b8dce8;
+    border: 1px solid #d9edf7;
     padding: 20px;
     border-radius: 4px;
 }
@@ -85,6 +85,36 @@ body {
     border: 1px solid var(--border-color);
     margin-bottom: 20px;
 }
+
+
+
+
+/* --- ESTILO PARA PREGUNTAS CON HTML --- */
+
+.question-text p {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.question-text strong {
+    font-weight: bold;
+}
+
+.question-text ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.question-text li {
+    font-size: 17px;
+    margin-bottom: 6px;
+}
+
+
+
+
+
 
 .options-container {
     background: #fff;
@@ -211,26 +241,9 @@ button:hover{
 }
 
 /* PARA SEPARAR MÁS EL CHECKBOX / RADIO */
-.options-container input[type="checkbox"],
-.options-container input[type="radio"] {
+.options-container input {
     margin-right: 10px;
     cursor: pointer;
-}
-
-/* HACER CHECKBOX REDONDO */
-.options-container input[type="checkbox"] {
-    width: 15px;
-    height: 15px;
-    -webkit-appearance: none;
-    border-radius: 50%;    /* 🎯 REDONDO */
-    border: 2px solid #0F6DB5;
-    background: white;
-    position: relative;
-}
-
-/* MARCA INTERNA CUANDO ESTÁ SELECCIONADO */
-.options-container input[type="checkbox"]:checked {
-    background: #0F6DB5;
 }
 
 /* RESPONSIVE */

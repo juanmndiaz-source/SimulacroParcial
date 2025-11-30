@@ -42,7 +42,13 @@ function loadQuestion(index) {
     // Ocultar feedback al cambiar de pregunta
     document.getElementById("feedback-area").style.display = "none";
 
-    document.getElementById("question-text").innerText = q.question;
+    document.getElementById("question-text").innerHTML = q.question;
+
+    if (window.MathJax) {
+    MathJax.typesetPromise();
+    }
+
+
     document.getElementById("q-number-display").innerText = `Pregunta ${index + 1}`;
 
     const container = document.getElementById("options-list");
@@ -82,8 +88,10 @@ function loadQuestion(index) {
         }
 
         label.appendChild(input);
-        label.appendChild(document.createTextNode(opt));
+        label.insertAdjacentHTML("beforeend", opt);
         container.appendChild(label);
+
+        MathJax.typeset();
     });
 
     document.getElementById("btn-prev").disabled = index === 0;
